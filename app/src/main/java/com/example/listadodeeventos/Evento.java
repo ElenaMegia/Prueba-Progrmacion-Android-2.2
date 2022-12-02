@@ -9,7 +9,7 @@ public class Evento {
     private String nombre;
     private String descripcion;
     private String direccion;
-    private double precio;
+    private float precio;
     private Date fecha;
     private int aforo;
     private transient Bitmap imagen;
@@ -17,7 +17,7 @@ public class Evento {
     public Evento() {
     }
 
-    public Evento(int id, String nombre, String descripcion, String direccion, double precio, Date fecha, int aforo, Bitmap imagen) {
+    public Evento(int id, String nombre, String descripcion, String direccion, float precio, Date fecha, int aforo, Bitmap imagen) {
         this.id = id;
         this.nombre = nombre;
         this.descripcion = descripcion;
@@ -60,11 +60,11 @@ public class Evento {
         this.direccion = direccion;
     }
 
-    public double getPrecio() {
-        return precio;
+    public float getPrecio() {
+        return  precio;
     }
 
-    public void setPrecio(double precio) {
+    public void setPrecio(float precio) {
         this.precio = precio;
     }
 
