@@ -106,7 +106,7 @@ public class RegistroDeEventos extends AppCompatActivity implements View.OnClick
                             db.nuevoEvento(evento);
                             break;
                         case "modificar":
-                            evento.setId(idEvento);
+                            evento.setId((int) idEvento);
                             db.modificarEvento(evento);
                             break;
                         default:
@@ -125,8 +125,6 @@ public class RegistroDeEventos extends AppCompatActivity implements View.OnClick
                     etFecha.setText("");
                 } catch (ParseException pe) {
                     Toast.makeText(this, "Formato de fecha no válido", Toast.LENGTH_LONG).show();
-                } catch (ParseException e) {
-                    e.printStackTrace();
                 }
                 break;
             case R.id.btCerrar:
